@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import base64
 import json
-
+#Hola desde vs
 app = Flask(__name__) # Crea una aplicación web Flask, y app se convierte en una instancia de esta aplicación.
 
 app.static_folder = 'static'# Configurar la carpeta de archivos estáticos

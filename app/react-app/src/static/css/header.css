@@ -1,34 +1,35 @@
+/* Header */
 header {
-    background-image: linear-gradient(to right, rgb(3, 10, 25), rgb(0, 0, 0));
-    padding: 2.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    position: fixed;
-    width: 8em;
-    height: 100vh;
+  background-image: linear-gradient(to right, rgb(0, 12, 24), rgb(0, 5, 22));
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  width: 8em;
+  height: 100vh;
+  left: 0;
 }
 
-/*Elementos Header*/
-
+/* Estilos para la navegación dentro del header */
 header nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  header nav a {
-    color: rgba(255, 255, 255, 0.35);
-    border-bottom: 0.2em solid rgb(245, 140, 10);
-    display: block;
-    padding: 2em 0;
-    font-size: 0.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-  }
-  
-  header nav a:hover {
-    color: rgb(255, 255, 255);
-    opacity: 0.95;
-  }
+  list-style: none;
+  padding: 0;
+}
+
+header nav a {
+  color: rgba(255, 255, 255, 0.802);
+  border-bottom: 0.2em solid rgb(235, 245, 10);
+  display: block;
+  padding: 2em 0;
+  font-size: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+header nav a:hover {
+  color: rgb(235, 245, 10);
+  opacity: 0.95;
+}

@@ -1,3 +1,4 @@
+#Pasar el proyecto a react-typescrip-sass y hacer api rest
 from flask import Flask, render_template, request
 import cv2
 import numpy as np

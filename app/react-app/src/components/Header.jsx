@@ -7,7 +7,7 @@ const Header = () => {
             <nav>
                 <ul>
                     <li><a href="/" title="Inicio"><i className="material-icons">home</i>Inicio</a></li>
-                    <li><a href="/#cargar" title="Cargar Imagen"><i className="material-icons">upload</i>Cargar Imagen</a></li>
+                    <li><a href="/#preprocessing" title="Cargar Imagen"><i className="material-icons">upload</i>Cargar Imagen</a></li>
                 </ul>
             </nav>
         </header>

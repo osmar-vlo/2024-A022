@@ -1,18 +1,11 @@
-#Pasar el proyecto a react-typescrip-sass y hacer api rest
-from flask import Flask, render_template, request
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import cv2
 import numpy as np
 import base64
-import json
 
 app = Flask(__name__)
-
-app.static_folder = 'static'
-app.static_url_path = '/static'
-
-@app.route('/')
-def index():
-    return render_template('index.html')
+CORS(app)
 
 @app.route('/preprocesamiento', methods=['POST'])
 def procesar_imagen():
@@ -41,22 +34,15 @@ def procesar_imagen():
         _, img_recortada_encoded = cv2.imencode('.png', img_recortada)
         img_recortada_base64 = base64.b64encode(img_recortada_encoded).decode('utf-8')
 
-        _, img_encoded = cv2.imencode('.png', img)
-        img_base64 = base64.b64encode(img_encoded).decode('utf-8')
-
         datos_json = {
+            "resultado": f"Imagen procesada con éxito. Rostros detectados: {len(rostros)}",
+            "img_recortada_base64": img_recortada_base64,
             "rostros_recortados": rostros_recortados
         }
 
-        with open('datos_rostros.json', 'w') as json_file:
-            json.dump(datos_json, json_file)
-
-        return render_template('index.html', resultado=f"Imagen procesada con éxito. Rostros detectados: {len(rostros)}",
-                       img_base64=img_base64, rostros_recortados=rostros_recortados,
-                       img_recortada_base64=img_recortada_base64)
+        return jsonify(datos_json)
     except Exception as e:
-        return render_template('index.html', resultado=f"Error al procesar la imagen: {str(e)}")
-    
+        return jsonify({"error": str(e)})
+
 if __name__ == '__main__':
-    app.config['UPLOAD_FOLDER'] = 'static/imagenes'
     app.run(debug=True)

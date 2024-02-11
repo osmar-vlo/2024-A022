@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../static/css/preprocessing.css';
+import '../assets/css/preprocessing.css';
 
 const Preprocessing = () => {
     const [resultado, setResultado] = useState('');

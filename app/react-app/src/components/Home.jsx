@@ -1,6 +1,5 @@
 import React from 'react';
-import '../static/css/home.css';
-
+import '../assets/css/home.css';
 const Home = () => {
     return (
         <section id="home">
@@ -13,4 +12,5 @@ const Home = () => {
         </section>
     );
 }
+
 export default Home;

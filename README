@@ -1,0 +1,24 @@
+# Git
+
+## Proceso típico de modificación
+
+El proceso típico de modificación en Git implica los siguientes pasos:
+
+1. **Hacer cambios en tus archivos:** Realiza las modificaciones necesarias en los archivos de tu proyecto.
+
+2. **Agregar los cambios al área de preparación:** Utiliza el comando `git add` para agregar los archivos modificados al área de preparación. Puedes agregar archivos específicos o todos los archivos modificados y nuevos.
+
+   ```bash
+   git add nombre_del_archivo     # Agregar un archivo específico
+   git add .                      # Agregar todos los archivos modificados y nuevos
+
+*Crear un commit con los cambios agregados (git commit).
+Comandos:
+git commit -m "Mensaje del commit"   # Crear un commit con un mensaje
+
+git commit -am "Mensaje del commit"  # Agregar y commitear archivos modificados y crear un commit con un mensaje
+
+*Enviar los commits locales al repositorio remoto (git push).
+git push origin main
+
+Comandos REACT:

@@ -1,3 +1,12 @@
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+
 ## Project Structure
 
 ├── src/              # Source files

@@ -1,14 +1,18 @@
-```── my_project/ # Root directory 
-```├── src/ # Source files ```
-```│   ├── index.html # Main HTML file ```
-```│   ├── styles.css # CSS styles ```
-```│   └── script.js # JavaScript code ```
-```├── docs/ # Documentation files ```
-```│   └── README.md # Documentation README ```
-```├── tests/ # Test files ```
-```│   └── test.js # Test suite ```
-```├── LICENSE # License file ```
-```└── README.md # Project README file ```
+<details>
+<summary>Click to expand project structure</summary>
+── my_project/ # Root directory
+├── src/ # Source files
+│ ├── index.html # Main HTML file
+│ ├── styles.css # CSS styles
+│ └── script.js # JavaScript code
+├── docs/ # Documentation files
+│ └── README.md # Documentation README
+├── tests/ # Test files
+│ └── test.js # Test suite
+├── LICENSE # License file
+└── README.md # Project README file
+</details>
+
 
 ## Table of Contents
 

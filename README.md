@@ -1,3 +1,8 @@
+# Encabezado Principal
+## Encabezado Secundario
+### Encabezado Terciario
+
+
 # reactJS
 
   Repository with files from React courses I have taken.
@@ -47,7 +52,7 @@
 
 
 # Git
-
+##
 ## Proceso típico de modificación
 
 El proceso típico de modificación en Git implica los siguientes pasos:

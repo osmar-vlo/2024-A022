@@ -5,9 +5,9 @@
 - [Contributing](#contributing)
 - [License](#license)``` 
 
-##Structure
+## Structure
 <details>
-<summary>#Structure</summary>
+<summary>Click to expand project structure</summary>
 - my_project/             # Root directory  
   - src/                  # Source files  
     - index.html          # Main HTML file  

@@ -12,12 +12,12 @@
   - API Flask/ # Backend
   
 ## React
-  Iniciar el servidor de desarrollo local (http://localhost:3000/)
+  - **Iniciar el servidor de desarrollo local (http://localhost:3000/)**
+  Para iniciar el servidor de desarrollo local, asegúrate de estar dentro de la carpeta react-app/ y ejecuta el siguiente comando en tu terminal:
   ```bash
    npm run start 
   ```
-
-  Repository with files from React courses I have taken.
+  Este comando iniciará el servidor de desarrollo local, permitiéndote acceder a tu aplicación React en tu navegador web en la dirección http://localhost:3000/.
 
 - **Web Development Club**
 

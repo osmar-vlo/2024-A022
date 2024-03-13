@@ -6,9 +6,18 @@
 - [License](#license)``` 
 
 ## Structure
-- my_project/             # Root directory  
-  - src/                  # Source files  
-    - index.html          # Main HTML file  
+- app/
+  
+  - Proyecto Local/
+    - templates
+      - index.html 
+    - app.py
+                   
+  - react-app/
+  - Api Flask/
+ 
+  -                     
+    - index.html            
     - styles.css          # CSS styles  
     - script.js           # JavaScript code  
   - docs/                 # Documentation files  

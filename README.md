@@ -1,10 +1,11 @@
 ## Table of Contents
 
-- [Installation](##Structure)
+- [Project Structure](##Structure)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)``` 
 
+##Structure
 <details>
 <summary>#Structure</summary>
 - my_project/             # Root directory  

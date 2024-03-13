@@ -7,49 +7,10 @@
 
 ## Structure
 - app/
+  - Proyecto Local/          
+  - react-app/ # Frontend
+  - Api Flask/ # Backend
   
-  - Proyecto Local/
-    - templates
-      - index.html 
-    - app.py
-                   
-  - react-app/
-  - Api Flask/
- 
-  -                     
-    - index.html            
-    - styles.css          # CSS styles  
-    - script.js           # JavaScript code  
-  - docs/                 # Documentation files  
-    - README.md           # Documentation README  
-  - tests/                # Test files  
-    - test.js             # Test suite  
-  - LICENSE               # License file  
-  - README.md             # Project README file
-
-# Encabezado Principal
-## Encabezado Secundario
-### Encabezado Terciario
-
-**Texto en Negrita**
-*Texto en Cursiva*
-
-- Elemento uno
-- Elemento dos
-  1. Subelemento uno
-  2. Subelemento dos
-
-1. Elemento uno
-2. Elemento dos
-
-[Texto del Enlace](URL_del_Enlace)
-
-![Texto Alternativo](URL_de_la_Imagen)
-
-`Código en línea`
-
-> Esto es una cita.
-
 
 # reactJS
 
@@ -123,3 +84,23 @@ git commit -am "Mensaje del commit"  # Agregar y commitear archivos modificados 
 git push origin main
 
 Comandos REACT:
+
+
+**Texto en Negrita**
+*Texto en Cursiva*
+
+- Elemento uno
+- Elemento dos
+  1. Subelemento uno
+  2. Subelemento dos
+
+1. Elemento uno
+2. Elemento dos
+
+[Texto del Enlace](URL_del_Enlace)
+
+![Texto Alternativo](URL_de_la_Imagen)
+
+`Código en línea`
+
+> Esto es una cita.

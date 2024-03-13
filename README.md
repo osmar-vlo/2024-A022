@@ -28,7 +28,7 @@ Para compilar y construir tu aplicación para producción, asegúrate de estar d
   ```bash
    npm run build 
   ```
-Este comando se encarga de utilizar Webpack para compilar y construir tu aplicación, preparándola para ser desplegada en un entorno de producción. Durante este proceso, Webpack aplica optimizaciones para reducir el tamaño del código y mejorar el rendimiento de la aplicación.
+Este comando se encarga de utilizar Webpack para compilar y construir la aplicación, preparándola para ser desplegada en un entorno de producción. Durante este proceso, Webpack aplica optimizaciones para reducir el tamaño del código y mejorar el rendimiento de la aplicación.
 
 ###  Iniciar el servidor de desarrollo local.
 
@@ -36,4 +36,4 @@ Para iniciar el servidor de desarrollo local y comenzar a trabajar en tu proyect
   ```bash
    npm run dev  
   ```
-Este comando utiliza Webpack en modo de desarrollo para compilar tu aplicación y servirla localmente. Te permite desarrollar y probar tu aplicación en tiempo real mientras haces cambios en el código. Además, proporciona mensajes de error y advertencia detallados que te ayudan a depurar y mejorar tu aplicación durante el proceso de desarrollo.
+Este comando utiliza Webpack en modo de desarrollo para compilar la aplicación y servirla localmente. Te permite desarrollar y probar tu aplicación en tiempo real mientras haces cambios en el código. Además, proporciona mensajes de error y advertencia detallados que te ayudan a depurar y mejorar tu aplicación durante el proceso de desarrollo.

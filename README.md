@@ -1,4 +1,4 @@
-```── my_project/ # Root directory ```
+```── my_project/ # Root directory 
 ```├── src/ # Source files ```
 ```│   ├── index.html # Main HTML file ```
 ```│   ├── styles.css # CSS styles ```

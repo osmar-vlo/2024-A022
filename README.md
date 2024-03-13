@@ -1,3 +1,13 @@
+## Project Structure
+
+├── src/              # Source files
+│   ├── index.html    # Main HTML file
+│   ├── styles.css    # CSS styles
+│   └── script.js     # JavaScript code
+├── docs/             # Documentation files
+└── LICENSE           # License file
+
+
 # Encabezado Principal
 ## Encabezado Secundario
 ### Encabezado Terciario

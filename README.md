@@ -3,7 +3,7 @@
 - [Project Structure](##Structure)
 - [React](##React)
 - [Webpack](##Webpack)
-- [Flask](##Flask)``` 
+- [Flask](##Flask)
 
 ## Structure
 - app/

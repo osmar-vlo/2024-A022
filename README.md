@@ -13,11 +13,12 @@
   
 ## React
   - **Iniciar el servidor de desarrollo local (http://localhost:3000/)**
-  Para iniciar el servidor de desarrollo local, asegúrate de estar dentro de la carpeta react-app/ y ejecuta el siguiente comando en tu terminal:
+
+Para iniciar el servidor de desarrollo local, asegúrate de estar dentro de la carpeta react-app/ y ejecuta el siguiente comando en tu terminal:
   ```bash
    npm run start 
   ```
-  Este comando iniciará el servidor de desarrollo local, permitiéndote acceder a tu aplicación React en tu navegador web en la dirección http://localhost:3000/.
+Este comando iniciará el servidor de desarrollo local, permitiéndote acceder a tu aplicación React en tu navegador web en la dirección http://localhost:3000/.
 
 - **Web Development Club**
 

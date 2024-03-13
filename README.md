@@ -12,8 +12,9 @@
   - API Flask/ # Backend
   
 ## React
+  Iniciar el servidor de desarrollo local (http://localhost:3000/)
   ```bash
-   npm run start     # http://localhost:3000/
+   npm run start 
   ```
 
   Repository with files from React courses I have taken.

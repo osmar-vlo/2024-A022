@@ -2,6 +2,28 @@
 ## Encabezado Secundario
 ### Encabezado Terciario
 
+**Texto en Negrita**
+*Texto en Cursiva*
+
+- Elemento uno
+- Elemento dos
+  1. Subelemento uno
+  2. Subelemento dos
+
+1. Elemento uno
+2. Elemento dos
+
+[Texto del Enlace](URL_del_Enlace)
+
+![Texto Alternativo](URL_de_la_Imagen)
+
+`Código en línea`
+
+```python
+print("Bloque de Código en Python")
+
+> Esto es una cita.
+
 
 # reactJS
 

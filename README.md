@@ -19,9 +19,6 @@
 
 `Código en línea`
 
-```python
-print("Bloque de Código en Python")
-
 > Esto es una cita.
 
 

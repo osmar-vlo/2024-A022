@@ -1,12 +1,12 @@
 ## Table of Contents
 
-- [Installation](##Project structure)
+- [Installation](##Structure)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)``` 
 
 <details>
-<summary>##Project structure</summary>
+<summary>##Structure</summary>
 - my_project/             # Root directory  
   - src/                  # Source files  
     - index.html          # Main HTML file  

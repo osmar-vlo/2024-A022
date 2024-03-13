@@ -6,8 +6,6 @@
 - [License](#license)``` 
 
 ## Structure
-<details>
-<summary>Click to expand project structure</summary>
 - my_project/             # Root directory  
   - src/                  # Source files  
     - index.html          # Main HTML file  
@@ -19,7 +17,6 @@
     - test.js             # Test suite  
   - LICENSE               # License file  
   - README.md             # Project README file
-</details>
 
 # Encabezado Principal
 ## Encabezado Secundario

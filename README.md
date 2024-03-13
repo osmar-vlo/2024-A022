@@ -6,7 +6,7 @@
 - [License](#license)``` 
 
 <details>
-<summary>##Structure</summary>
+<summary>#Structure</summary>
 - my_project/             # Root directory  
   - src/                  # Source files  
     - index.html          # Main HTML file  

@@ -19,6 +19,7 @@ header nav ul {
 }
 
 header nav a {
+  margin-bottom: 2em;
   color: rgba(255, 255, 255, 0.802);
   border-bottom: 0.2em solid rgb(235, 245, 10);
   display: block;
@@ -32,4 +33,20 @@ header nav a {
 header nav a:hover {
   color: rgb(235, 245, 10);
   opacity: 0.95;
+}
+
+@media screen and (max-width: 580px) {
+  header nav a {
+    margin-right: 8em; /* Reducimos el margen derecho para dejar espacio entre los elementos */
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección del flex a vertical */
+    align-items: center; /* Centramos el contenido horizontalmente */
+    text-align: center; /* Centramos el texto */
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Distribuye el espacio equitativamente entre los elementos */
+  }
 }

@@ -16,6 +16,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.23.9",

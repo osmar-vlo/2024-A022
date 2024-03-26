@@ -21,7 +21,7 @@ header nav ul {
 header nav a {
   margin-bottom: 2em;
   color: rgba(255, 255, 255, 0.802);
-  border-bottom: 0.2em solid rgb(235, 245, 10);
+  border-bottom: 0.1em solid rgb(235, 245, 10);
   display: block;
   padding: 2em 0;
   font-size: 0.5em;

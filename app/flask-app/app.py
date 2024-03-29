@@ -37,7 +37,7 @@ def procesar_imagen():
             rostro_recortado = img[y:y+h, x:x+w]
 
             # Recortar la imagen del rostro a 50x50 píxeles
-            rostro_recortado_pequeno = cv2.resize(rostro_recortado, (50, 50))
+            rostro_recortado_pequeno = cv2.resize(rostro_recortado, (300, 300))
 
             # Convertir la imagen recortada a formato base64
             _, rostro_encoded = cv2.imencode('.png', rostro_recortado_pequeno)

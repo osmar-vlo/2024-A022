@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de tu Aplicación</title>
-    <!-- Aquí puedes agregar enlaces a tus estilos CSS si los tienes -->
+    <title>Backend</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
-    <h1>Bienvenido a mi Aplicación</h1>
-    <!-- Aquí puedes agregar contenido adicional según tus necesidades -->
+    <header>
+        <h1>Bienvenido al Backend</h1>
+    </header>
+    <div class="container">
+        <h2>Contacto</h2>
+        <p>Puedes contactarnos a través del siguiente formulario:</p>
+        <form action="/contacto" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required><br>
+            <input type="email" name="correo" placeholder="Correo electrónico" required><br>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea><br>
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+    </div>
 </body>
 </html>

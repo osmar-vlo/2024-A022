@@ -1,0 +1,25 @@
+1S()_2E()_3TR()_4FO()_5CO()_6TN()_7FL()_8FC()_9CC()_10FC()_11VF()_12M()
+
+1S : Masc, Fem
+
+2E : Blanco, Asian, Latino, Afro, Indigena, Arabe, Indio
+
+3TR: Redondo, Diamante, Cuadrado, Alargado
+
+4FO: Almendra, Razgado, Hundido, Salton, Caido
+
+5CO: Marrón, Azul, Verde, Negro
+
+6TN: Recta, Aguileña, Respingada, Ancha, Concava
+
+7FL: Grueso, Delgado
+
+8FC: Liso, Ondulado, Rizado, Afro
+
+9CC: Negro, Castaño, Rubio, Pelirrojo, Blanco
+
+10FC: Recta, Arqueada, Redonda, Delgada, Gruesa, Uniceja
+
+11VF: Completa, Candado, Chivo, Bigote, Irregular, No
+
+12M : Si, No

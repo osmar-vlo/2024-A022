@@ -62,7 +62,7 @@ def procesar_imagen():
             rostros_recortados.append({"imagen_base64": rostro_base64, "vectorizacion": rostro_vectorizado.tolist()})
 
         # Recortar la imagen principal a 300x300 píxeles
-        img_recortada = cv2.resize(img, (250, 250))
+        img_recortada = cv2.resize(img, (300, 300))
 
         # Convertir la imagen recortada a formato base64
         _, img_recortada_encoded = cv2.imencode('.png', img_recortada)

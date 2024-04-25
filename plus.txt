@@ -1,3 +1,21 @@
 "proxy": "http://127.0.0.1:5000",
 conda deactivate
-prueba
+
+Git:
+sudo apt install git
+git clone https://github.com/osmar-vlo/2024-A022.git
+git config --global user.email "you@example.com"
+
+Dependencias Backend:
+sudo apt install -y python3 python3-pip
+sudo apt install python3-flask
+sudo apt install python3-flask-cors
+sudo apt install python3-opencv
+
+Dependencias Front:
+sudo apt install nodejs npm
+npm install react-scripts
+npm install react react-dom
+npm install @babel/core @babel/preset-env babel-loader --save-dev
+npm install webpack webpack-cli --save-dev
+npm install sass --save-dev

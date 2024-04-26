@@ -11,6 +11,8 @@ sudo apt install -y python3 python3-pip
 sudo apt install python3-flask
 sudo apt install python3-flask-cors
 sudo apt install python3-opencv
+sudo apt install python3-dlib
+
 
 Dependencias Front:
 sudo apt install nodejs npm
@@ -19,3 +21,39 @@ npm install react react-dom
 npm install @babel/core @babel/preset-env babel-loader --save-dev
 npm install webpack webpack-cli --save-dev
 npm install sass --save-dev
+
+DLIB installation
+How to install dlib v19.9 or newer (w/ python bindings) from github on macOS and Ubuntu
+Pre-reqs:
+
+Have Python 3 installed. On macOS, this could be installed from homebrew or even via standard Python 3.6 downloaded installer from https://www.python.org/download. On Linux, just use your package manager.
+On macOS:
+Install XCode from the Mac App Store (or install the XCode command line utils).
+Have homebrew installed
+On Linux:
+For a full list of apt packages required, check out the example Dockerfile and copy what's installed there.
+These instructions assume you are using Ubuntu 16.04 or newer. If you are using 14.04, you can try these installation instructions instead to work around the old CMake version.
+These instructions assume you don't have an nVidia GPU and don't have Cuda and cuDNN installed and don't want GPU acceleration.
+Clone the code from github:
+
+git clone https://github.com/davisking/dlib.git
+Build the main dlib library (optional if you just want to use Python):
+
+cd dlib
+mkdir build; cd build; cmake ..; cmake --build .
+Build and install the Python extensions:
+
+cd ..
+python3 setup.py install
+At this point, you should be able to run python3 and type import dlib successfully.
+
+If you are looking for dlib with GPU support just check whether your cmake is finding CUDA or not?
+
+You can check that while running cmake ... If you see following instruction then Dlib will use CUDA
+
+-- Found CUDA: /usr/local/cuda (found suitable version "9.2", minimum required is "7.5") 
+-- Looking for cuDNN install...
+-- Found cuDNN: /usr/local/cuda/lib/libcudnn.dylib
+-- Building a CUDA test project to see if your compiler is compatible with CUDA...
+-- Checking if you have the right version of cuDNN installed.
+-- Enabling CUDA support for dlib.  DLIB WILL USE CUDA

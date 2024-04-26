@@ -32,10 +32,6 @@ class Imagen:
 
             # Iterar sobre los rostros detectados
             for i, (x, y, w, h) in enumerate(rostros):
-                # Calcular la posición vertical ajustada
-                ajuste_vertical = 150 
-                y_ajustado = max(y - ajuste_vertical, 200)
-
                 # ROI en escala de grises
                 roi_gris = imagen_gris[y:y+h, x:x+w]
                 self.gris_roi.append(cv2.resize(roi_gris, (300, 300), interpolation=cv2.INTER_LANCZOS4))

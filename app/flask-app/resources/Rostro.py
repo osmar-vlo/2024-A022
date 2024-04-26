@@ -1,10 +1,13 @@
 import cv2
 import dlib
+import base64
 import math
 
 class Rostro:
 
-    def __init__(self):
+    def __init__(self, gris_cuts, color_cuts):
+            self.gris_cuts = gris_cuts
+            self.color_cuts = color_cuts
             self.landmarks = [] 
             self.dist_ojo_der = []
             self.dist_ojo_izq = []
@@ -13,13 +16,14 @@ class Rostro:
             self.dist_nariz = []
             self.dist_forma = []
 
-    def get_landmarks_image(self, gris_cuts, color_cuts):
+    def get_landmarks_image(self):
+        try:
             # Cargar el detector de caras de dlib (HOG-based)
             detector = dlib.get_frontal_face_detector()
             predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")        
             # Iterar sobre las imágenes en escala de grises y en color
             
-            for imagen_gris, imagen_color in zip(gris_cuts, color_cuts):
+            for imagen_gris, imagen_color in zip(self.gris_cuts, self.color_cuts):
                 caras = detector(imagen_gris)
                 for cara in caras:
                     landmarks = predictor(imagen_gris, cara)
@@ -99,6 +103,13 @@ class Rostro:
                     self.dist_ceja_izq.append(distancia_ceja_izq)
                     self.dist_nariz.append(distancia_nariz)
                     self.dist_forma.append(distancia_forma)
-                    # Guardar la imagen del rostro con landmarks
-                    self.landmarks.append(imagen_color_con_landmarks)
+                    # Guardar y convertir la imagen recortada a formato base64
+                    _, rostro_encoded = cv2.imencode('.png', imagen_color_con_landmarks)
+                    rostro_base64 = base64.b64encode(rostro_encoded).decode('utf-8')
+                    # Agregar rostros recortados a la lista
+                    self.landmarks.append(rostro_base64)
             return self.landmarks, self.dist_ojo_der, self.dist_ojo_izq, self.dist_ceja_der, self.dist_ceja_izq, self.dist_nariz, self.dist_forma
+        
+        except Exception as e:
+            # Manejo de errores
+            print(f"Error en la detección de Landmarks: {e}")

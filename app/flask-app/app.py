@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 import base64
 import json
+from models.JSON import JSON
 
 app = Flask(__name__)
 CORS(app) # Habilita CORS para toda la aplicación

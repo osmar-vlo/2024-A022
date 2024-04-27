@@ -2,7 +2,9 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import cv2
 import numpy as np
-import base64
+
+from Imagen import Imagen
+from Rostro import Rostro
 
 app = Flask(__name__)
 CORS(app) # Habilita CORS para toda la aplicación
@@ -10,9 +12,6 @@ CORS(app) # Habilita CORS para toda la aplicación
 @app.route('/')
 def index():
     return render_template('index.html')
-
-from Imagen import Imagen
-from Rostro import Rostro
 
 @app.route('/preprocesamiento', methods=['POST'])
 def procesar_imagen():
@@ -49,22 +48,8 @@ def procesar_imagen():
             }
             response_data_list.append(response_data)
 
-        for data in response_data_list:
-            print(data)
+        return jsonify(response_data_list)
 
-        # Listas para almacenar rostros normalizados, vectorizados y recortados
-        rostros_recortados = []
-
-        # Agregar rostros recortados a la lista
-        rostros_recortados.append({"imagen_base64": landmarks})
-
-        # Formar la respuesta
-        response_data = {
-            "resultado": f"Imagen procesada con éxito. Rostros detectados: {len(landmarks)}",
-            "rostros_recortados": rostros_recortados
-        }
-
-        return jsonify(response_data)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

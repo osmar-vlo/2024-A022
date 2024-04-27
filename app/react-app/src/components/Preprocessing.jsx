@@ -3,17 +3,17 @@ import '../assets/css/preprocessing.css';
 
 const Preprocessing = () => {
     const [resultado, setResultado] = useState('');
-    const [rostrosRecortados, setRostrosRecortados] = useState([]);
     const [imagen, setImagen] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [responseDataList, setResponseDataList] = useState([]); // Nuevo estado para almacenar los datos del servidor
 
     const handleFileChange = (event) => {
         setImagen(event.target.files[0]);
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        setLoading(true);
+        event.preventDefault(); // Evita la recarga de la página al enviar el formulario
+        setLoading(true); // Activa el estado de carga
 
         try {
             const formData = new FormData();
@@ -25,15 +25,17 @@ const Preprocessing = () => {
             });
 
             const data = await response.json();
-
-            setResultado(data.resultado);
-            setRostrosRecortados(data.rostros_recortados);
+            console.log(data);
+            // Aquí asumimos que la respuesta del servidor es una lista de objetos
+            // donde cada objeto tiene propiedades como landmarks, dist_ojo_der, etc.
+            // Puedes iterar sobre esta lista para mostrar los datos en el frontend.
+            setResponseDataList(data); // Suponiendo que `data` es la lista recibida del servidor
         } catch (error) {
             console.error('Error al procesar la imagen:', error);
             setResultado('Error al procesar la imagen. Consulta la consola para más detalles.');
         }
 
-        setLoading(false);
+        setLoading(false); // Desactivar el estado de carga al finalizar el procesamiento
     };
 
     return (
@@ -56,12 +58,31 @@ const Preprocessing = () => {
             </div>
             <div>
                 <p>Rostros Detectados:</p>
-                {rostrosRecortados.map((rostro, index) => (
-                    <img key={index} src={`data:image/png;base64,${rostro.imagen_base64}`} alt={`Rostro ${index}`} />
-                ))}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Landmarks</th>
+                            <th>Distancia Ojo Derecho</th>
+                            <th>Distancia Ojo Izquierdo</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {responseDataList.map((data, index) => (
+                            <tr key={index}>
+                                <td>{data.dist_ojo_der}</td>
+                                <td>{data.dist_ojo_izq}</td>
+                                <td>
+                                    {data.imagen_url && (
+                                        <img src={`data:image/jpeg;base64,${data.landmarks}`} alt={`Rostro ${index}`} />
+                                    )}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </section>
     );
 };
-
 export default Preprocessing;

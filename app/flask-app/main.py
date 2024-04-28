@@ -2,7 +2,7 @@ from Imagen import Imagen
 from Rostro import Rostro
 
 # Crear una instancia de la clase Imagen
-imagen = Imagen('ressize.png')
+imagen = Imagen('p3.jpg')
 
 # Realizar el preprocesamiento y obtener las imágenes procesadas
 imagen_lan, imagen_gris = imagen.preprocesamiento()

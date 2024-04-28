@@ -42,10 +42,7 @@ const Preprocessing = () => {
         <section id="preprocessing">
             <h1>Preprocesamiento de Imagen</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+                dolore magna aliqua...</p>
             <form onSubmit={handleSubmit}>
                 <input type="file" name="imagen" onChange={handleFileChange} />
                 <button type="submit" disabled={!imagen || loading}>
@@ -53,35 +50,61 @@ const Preprocessing = () => {
                 </button>
             </form>
             <div>
-                <h2>Resultado:</h2>
-                <p>{resultado}</p>
-            </div>
-            <div>
-                <p>Rostros Detectados:</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Landmarks</th>
-                            <th>Distancia Ojo Derecho</th>
-                            <th>Distancia Ojo Izquierdo</th>
-                            <th>Imagen</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {responseDataList.map((data, index) => (
-                            <tr key={index}>
-                                <td>{data.dist_ojo_der}</td>
-                                <td>{data.dist_ojo_izq}</td>
+            <h2>Resultado:</h2>
+            <p>{resultado}</p>
+            {responseDataList.map((data, index) => (
+                <div key={index}>
+                    <img src={`data:image/jpeg;base64,${data.landmarks}`} alt={`Imagen ${index}`} />
+                    <p>Distancias Euclideanas:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ojo Derecho</th>
+                                <th>Ojo Izquierdo</th>
+                                <th>Ceja Derecha</th>
+                                <th>Ceja Izquierda</th>
+                                <th>Nariz</th>
+                                <th>Estructura</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
                                 <td>
-                                    {data.imagen_url && (
-                                        <img src={`data:image/jpeg;base64,${data.landmarks}`} alt={`Rostro ${index}`} />
-                                    )}
+                                    {data.dist_ojo_der.map((value, idx) => (
+                                        <div key={idx}><li>{value}</li></div>
+                                    ))}
+                                </td>
+                                <td>
+                                    {data.dist_ojo_izq.map((value, idx) => (
+                                        <div key={idx}><li>{value}</li></div>
+                                    ))}
+                                </td>
+                                <td>
+                                    {data.dist_ceja_der.map((value, idx) => (
+                                        <div key={idx}><li>{value}</li></div>
+                                    ))}
+                                </td>
+                                <td>
+                                    {data.dist_ceja_izq.map((value, idx) => (
+                                        <div key={idx}><li>{value}</li></div>
+                                    ))}
+                                </td>
+                                <td>
+                                    {data.dist_nariz.map((value, idx) => (
+                                        <div key={idx}><li>{value}</li></div>
+                                    ))}
+                                </td>
+                                <td>
+                                    {data.dist_forma.map((value, idx) => (
+                                        <div key={idx}><li>{value}</li></div>
+                                    ))}
                                 </td>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+                        </tbody>
+                    </table>
+                </div>
+            ))}
+        </div>
         </section>
     );
 };

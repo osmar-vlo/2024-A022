@@ -3,7 +3,7 @@ from PIL import Image
 from datetime import datetime
 
 # Obtener la ruta de la carpeta con los archivos GIF
-folder_path = '/home/mxn/Documents/2024-A022/Images/gif'
+folder_path = '/home/mxn/Documents/2024-A022/DatasetAgeGif/Afrodescendientes/woman'
 
 # Obtener la lista de archivos GIF en la carpeta
 gif_files = [file for file in os.listdir(folder_path) if file.lower().endswith('.gif')]
